@@ -1,0 +1,59 @@
+# Bowel Injury Detection - Supplementary Materials
+# Environment: bowel_env (Python 3.8)
+#
+# Install: pip install -r requirements.txt
+# Or recreate conda environment: conda create -n bowel_env python=3.8
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.14.0
+torchaudio>=0.13.0
+
+# Vision Models
+timm>=0.9.2
+efficientnet-pytorch>=0.7.1
+einops>=0.8.0
+
+# Transformers & NLP (for MedCLIP)
+transformers>=4.40.0
+medclip>=0.0.3
+
+# Scientific Computing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+scikit-image>=0.21.0
+
+# Image Processing
+opencv-python>=4.8.0
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+albumentations>=1.4.0
+
+# Medical Imaging
+pydicom>=2.4.0
+nibabel>=5.2.0
+simpleitk>=2.1.0
+dicomsdl>=0.109.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.13.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+h5py>=3.3.0
+filelock>=3.12.0
+fsspec>=2024.0.0
+
+# Segmentation Models (for Team Oxygen)
+segmentation-models-pytorch>=0.3.3
+
+# Optional: CUDA support
+# nvidia-cudnn-cu12>=9.0.0
+# nvidia-cublas-cu12>=12.1.0
+
+# Development
+tensorboard>=2.14.0

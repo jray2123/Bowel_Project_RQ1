@@ -1,0 +1,412 @@
+{
+  "analysis_timestamp": "2025-07-27T19:58:49.299018",
+  "strategies_tested": [
+    "max",
+    "top3_mean",
+    "top5_mean",
+    "mean",
+    "median",
+    "p95",
+    "p90",
+    "p75",
+    "weighted_top3"
+  ],
+  "queries_analyzed": [
+    "bowel wall discontinuity visible on CT scan",
+    "transmural bowel injury with spillage",
+    "evidence of bowel injury on abdominal CT",
+    "grade 4 bowel injury with full thickness tear",
+    "ligamentum teres sign suggesting upper bowel perforation"
+  ],
+  "strategy_performance": {
+    "max": {
+      "mean_f1": 0.6313119324457908,
+      "std_f1": 0.010339245760214917,
+      "median_f1": 0.6306306306306306,
+      "max_f1": 0.6456692913385828,
+      "n_queries": 5
+    },
+    "top3_mean": {
+      "mean_f1": 0.628224848828075,
+      "std_f1": 0.005202535393827887,
+      "median_f1": 0.626865671641791,
+      "max_f1": 0.6356589147286821,
+      "n_queries": 5
+    },
+    "top5_mean": {
+      "mean_f1": 0.628224848828075,
+      "std_f1": 0.005202535393827887,
+      "median_f1": 0.626865671641791,
+      "max_f1": 0.6356589147286821,
+      "n_queries": 5
+    },
+    "mean": {
+      "mean_f1": 0.6167587424264109,
+      "std_f1": 0.003395215418211501,
+      "median_f1": 0.6176470588235294,
+      "max_f1": 0.6222222222222222,
+      "n_queries": 5
+    },
+    "median": {
+      "mean_f1": 0.6194904823243166,
+      "std_f1": 0.003636776971143559,
+      "median_f1": 0.6222222222222222,
+      "max_f1": 0.6222222222222222,
+      "n_queries": 5
+    },
+    "p95": {
+      "mean_f1": 0.6246579814529539,
+      "std_f1": 0.009136904648528288,
+      "median_f1": 0.626865671641791,
+      "max_f1": 0.6363636363636364,
+      "n_queries": 5
+    },
+    "p90": {
+      "mean_f1": 0.6222179039180276,
+      "std_f1": 0.00901117586314954,
+      "median_f1": 0.6222222222222222,
+      "max_f1": 0.6356589147286821,
+      "n_queries": 5
+    },
+    "p75": {
+      "mean_f1": 0.6149420352082439,
+      "std_f1": 0.0022086425332094456,
+      "median_f1": 0.6131386861313868,
+      "max_f1": 0.6176470588235294,
+      "n_queries": 5
+    },
+    "weighted_top3": {
+      "mean_f1": 0.6287840050105633,
+      "std_f1": 0.004392314729980604,
+      "median_f1": 0.626865671641791,
+      "max_f1": 0.6356589147286821,
+      "n_queries": 5
+    }
+  },
+  "strategy_sens_spec": {
+    "max": {
+      "mean_sensitivity": 0.9333333333333333,
+      "mean_specificity": 0.25862068965517243
+    },
+    "top3_mean": {
+      "mean_sensitivity": 0.9857142857142858,
+      "mean_specificity": 0.16551724137931037
+    },
+    "top5_mean": {
+      "mean_sensitivity": 0.9857142857142858,
+      "mean_specificity": 0.16551724137931037
+    },
+    "mean": {
+      "mean_sensitivity": 1.0,
+      "mean_specificity": 0.1
+    },
+    "median": {
+      "mean_sensitivity": 1.0,
+      "mean_specificity": 0.1103448275862069
+    },
+    "p95": {
+      "mean_sensitivity": 0.9904761904761905,
+      "mean_specificity": 0.14482758620689656
+    },
+    "p90": {
+      "mean_sensitivity": 0.9952380952380953,
+      "mean_specificity": 0.12758620689655173
+    },
+    "p75": {
+      "mean_sensitivity": 1.0,
+      "mean_specificity": 0.09310344827586206
+    },
+    "weighted_top3": {
+      "mean_sensitivity": 0.9761904761904763,
+      "mean_specificity": 0.18275862068965515
+    }
+  },
+  "clinical_recommendations": {
+    "best_f1": "max",
+    "best_sensitivity": "mean",
+    "best_specificity": "max",
+    "best_balance": "max"
+  },
+  "detailed_results": {
+    "bowel wall discontinuity visible on CT scan": {
+      "max": {
+        "f1": 0.6456692913385828,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.2413793103448276,
+        "auc": 0.5911330049261083
+      },
+      "top3_mean": {
+        "f1": 0.6356589147286821,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.20689655172413793,
+        "auc": 0.5710180623973727
+      },
+      "top5_mean": {
+        "f1": 0.6356589147286821,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.20689655172413793,
+        "auc": 0.5706075533661741
+      },
+      "mean": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.575944170771757
+      },
+      "median": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.5779967159277504
+      },
+      "p95": {
+        "f1": 0.631578947368421,
+        "sensitivity": 1.0,
+        "specificity": 0.15517241379310345,
+        "auc": 0.5496715927750411
+      },
+      "p90": {
+        "f1": 0.6222222222222222,
+        "sensitivity": 1.0,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5488505747126438
+      },
+      "p75": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5648604269293924
+      },
+      "weighted_top3": {
+        "f1": 0.6356589147286821,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.20689655172413793,
+        "auc": 0.5792282430213465
+      }
+    },
+    "transmural bowel injury with spillage": {
+      "max": {
+        "f1": 0.64,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.25862068965517243,
+        "auc": 0.6079638752052545
+      },
+      "top3_mean": {
+        "f1": 0.6201550387596899,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.1896551724137931,
+        "auc": 0.5997536945812808
+      },
+      "top5_mean": {
+        "f1": 0.6201550387596899,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.1896551724137931,
+        "auc": 0.5952380952380952
+      },
+      "mean": {
+        "f1": 0.6222222222222222,
+        "sensitivity": 1.0,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5718390804597702
+      },
+      "median": {
+        "f1": 0.6222222222222222,
+        "sensitivity": 1.0,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5591133004926109
+      },
+      "p95": {
+        "f1": 0.6119402985074626,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5517241379310345
+      },
+      "p90": {
+        "f1": 0.6086956521739131,
+        "sensitivity": 1.0,
+        "specificity": 0.06896551724137931,
+        "auc": 0.5582922824302134
+      },
+      "p75": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.5570607553366174
+      },
+      "weighted_top3": {
+        "f1": 0.6229508196721311,
+        "sensitivity": 0.9047619047619048,
+        "specificity": 0.27586206896551724,
+        "auc": 0.6013957307060755
+      }
+    },
+    "evidence of bowel injury on abdominal CT": {
+      "max": {
+        "f1": 0.6212121212121211,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.15517241379310345,
+        "auc": 0.6116584564860427
+      },
+      "top3_mean": {
+        "f1": 0.631578947368421,
+        "sensitivity": 1.0,
+        "specificity": 0.15517241379310345,
+        "auc": 0.5927750410509032
+      },
+      "top5_mean": {
+        "f1": 0.631578947368421,
+        "sensitivity": 1.0,
+        "specificity": 0.15517241379310345,
+        "auc": 0.5911330049261083
+      },
+      "mean": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5804597701149425
+      },
+      "median": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5804597701149425
+      },
+      "p95": {
+        "f1": 0.6363636363636364,
+        "sensitivity": 1.0,
+        "specificity": 0.1724137931034483,
+        "auc": 0.5648604269293924
+      },
+      "p90": {
+        "f1": 0.6356589147286821,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.20689655172413793,
+        "auc": 0.5558292282430214
+      },
+      "p75": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5636288998357963
+      },
+      "weighted_top3": {
+        "f1": 0.631578947368421,
+        "sensitivity": 1.0,
+        "specificity": 0.15517241379310345,
+        "auc": 0.5985221674876848
+      }
+    },
+    "grade 4 bowel injury with full thickness tear": {
+      "max": {
+        "f1": 0.6306306306306306,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.41379310344827586,
+        "auc": 0.6280788177339902
+      },
+      "top3_mean": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.6137110016420362
+      },
+      "top5_mean": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.6133004926108375
+      },
+      "mean": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.5866174055829229
+      },
+      "median": {
+        "f1": 0.6222222222222222,
+        "sensitivity": 1.0,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5870279146141215
+      },
+      "p95": {
+        "f1": 0.6165413533834586,
+        "sensitivity": 0.9761904761904762,
+        "specificity": 0.13793103448275862,
+        "auc": 0.5632183908045978
+      },
+      "p90": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.5669129720853858
+      },
+      "p75": {
+        "f1": 0.6176470588235294,
+        "sensitivity": 1.0,
+        "specificity": 0.10344827586206896,
+        "auc": 0.5734811165845648
+      },
+      "weighted_top3": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.6182266009852218
+      }
+    },
+    "ligamentum teres sign suggesting upper bowel perforation": {
+      "max": {
+        "f1": 0.6190476190476191,
+        "sensitivity": 0.9285714285714286,
+        "specificity": 0.22413793103448276,
+        "auc": 0.6104269293924466
+      },
+      "top3_mean": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.595648604269294
+      },
+      "top5_mean": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.5940065681444991
+      },
+      "mean": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5652709359605911
+      },
+      "median": {
+        "f1": 0.6222222222222222,
+        "sensitivity": 1.0,
+        "specificity": 0.1206896551724138,
+        "auc": 0.5545977011494253
+      },
+      "p95": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.5582922824302134
+      },
+      "p90": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.5500821018062397
+      },
+      "p75": {
+        "f1": 0.6131386861313868,
+        "sensitivity": 1.0,
+        "specificity": 0.08620689655172414,
+        "auc": 0.5517241379310345
+      },
+      "weighted_top3": {
+        "f1": 0.626865671641791,
+        "sensitivity": 1.0,
+        "specificity": 0.13793103448275862,
+        "auc": 0.6001642036124795
+      }
+    }
+  }
+}

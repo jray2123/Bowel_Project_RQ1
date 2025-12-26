@@ -1,0 +1,68 @@
+{
+  "model": {
+    "type": "cnn_25d_enhanced",
+    "target_slice_size": 320,
+    "max_sequence_length": 48,
+    "feature_extractor": "efficientnet-b3",
+    "feature_dim": 1536,
+    "lstm_hidden_dim": 256,
+    "lstm_bidirectional": true,
+    "aggregation_strategy": "final",
+    "position_encoding": true,
+    "num_organs": 5,
+    "dropout": 0.2
+  },
+  "training": {
+    "max_epochs": 25,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "scheduler": "cosine",
+    "warmup_epochs": 3,
+    "use_amp": true,
+    "grad_clip_norm": 1.0,
+    "log_interval": 50,
+    "patience": 8,
+    "gradient_accumulation_steps": 8,
+    "effective_batch_size": 16
+  },
+  "data": {
+    "data_dir": "/mnt/HDD4/jineel/bowel_project/Baseline/data/processed",
+    "labels_csv": "/mnt/HDD4/jineel/ratic_data/train_2024.csv",
+    "train_patients_csv": "/mnt/HDD4/jineel/bowel_project/Baseline/experiments/bowel_optimized_cnn/train_split.csv",
+    "val_patients_csv": "/mnt/HDD4/jineel/bowel_project/Baseline/experiments/bowel_optimized_cnn/val_split.csv",
+    "batch_size": 2,
+    "num_workers": 4,
+    "target_slice_size": 320,
+    "max_sequence_length": 48,
+    "sequence_sampling": "uniform",
+    "position_encoding": true,
+    "hu_windowing": true,
+    "hu_window_center": 50,
+    "hu_window_width": 400,
+    "bowel_oversample_factor": 15,
+    "augment_bowel_injuries": true,
+    "enable_augmentation": true,
+    "aug_rotation_range": 10.0,
+    "aug_translation_range": 0.1,
+    "aug_scaling_range": 0.1,
+    "aug_intensity_range": 0.1,
+    "augmentation_sanity_check": true
+  },
+  "loss": {
+    "focal_alpha": 0.75,
+    "focal_gamma": 3.0,
+    "bowel_loss_weight": 3.0,
+    "uncertainty_weight": 0.1,
+    "other_organ_weights": {
+      "extravasation": 1.0,
+      "liver": 1.0,
+      "kidney": 1.0,
+      "spleen": 1.0
+    }
+  },
+  "output": {
+    "experiment_name": "bowel_25d_cnn_enhanced",
+    "save_dir": "experiments/bowel_25d_cnn_enhanced",
+    "save_every_n_epochs": 5
+  }
+}
